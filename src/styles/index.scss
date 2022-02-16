@@ -1,0 +1,55 @@
+@use "sass:math";
+@use 'global';
+@use 'fonts';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "node_modules/magnific-popup/dist/magnific-popup";
+
+
+$root-font-size: 16;
+
+@function s($size) {
+  @return math.div($size, $root-font-size) * 1rem;
+}
+
+html {
+  font-family: 'Kinetika';
+  font-size: 100%;
+}
+
+body {
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 400;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+a {
+  transition: .3s;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+
+  p {
+    @apply mb-4
+  }
+
+  input, textarea, button {
+    @apply outline-none
+  }
+}
+
