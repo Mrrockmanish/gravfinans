@@ -30,6 +30,7 @@ body {
 .container {
   padding: 0 1rem;
   margin: 0 auto;
+  min-width: 1200px;
 }
 
 a {
@@ -37,6 +38,10 @@ a {
 }
 
 @layer base {
+  body {
+    @apply text-main
+  }
+
   h1 {
     @apply text-2xl;
   }
@@ -53,3 +58,30 @@ a {
   }
 }
 
+.header {
+  &__container {
+    grid-template-columns: 2fr 6fr 2fr 2fr;
+  }
+}
+
+.offer {
+  background-image: url("../images/elements/offer-bg.png");
+  background-size: 1920px 448px;
+  background-position: center top;
+
+  &__img {
+    bottom: 3rem;
+    right: 4rem;
+    transform: translateY(100%);
+  }
+}
+
+.gradient-btn {
+  background: linear-gradient(180deg, #0D4DA1 0%, #00AEEF 100%);
+
+}
+
+.offer-calc {
+  box-shadow: 0 31px 57px -6px rgba(0,0,0, 0.1);
+  max-width: s(545);
+}

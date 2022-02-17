@@ -2,8 +2,8 @@ module.exports = {
   content: ["./src/**/*.{html,js,pug}"],
   theme: {
     screens: {
-      'xl': '1200px',
-      'xxl': '1408px'
+      'lg': '1200px',
+      'xl': '1408px'
     },
 
     colors: {
@@ -15,8 +15,22 @@ module.exports = {
       '5C': '#5CD3FF',
       'blue': '#0D4DA1',
       'dark-blue': '#0F2447',
-      '8A': '#8A8A8A'
+      '8A': '#8A8A8A',
+      'BD': '#BDBDBD'
 
+    },
+
+    borderRadius: {
+      none: '0px',
+      sm: '0.125rem',
+      DEFAULT: '0.25rem',
+      md: '0.375rem',
+      lg: '0.5rem',
+      xl: '0.75rem',
+      '2xl': '1rem',
+      '20px': '1.25rem',
+      '3xl': '1.5rem',
+      full: '9999px',
     },
 
     extend: {
