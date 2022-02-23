@@ -1,0 +1,14 @@
+extends steps
+
+block content
+    +title('Решение по вашей заявке')
+    div(class="text-center text-base text-87 mt-2")
+        p К сожаленнию мы не можем выдать вам займ, но у нас есть решение!
+        p Попробуйте оформить заявку у наших партнеров
+    div(class='mt-6')
+        +btnGradient('Взять займы у партнёров')
+    div(class='text-center mt-4')
+        a(href="tel:+78007773705" class='text-[2rem] text-blue font-semibold hover:opacity-80') 8 800 777 37 05
+    div(class='mt-5')
+        img(src=require('./images/elements/short-logo.svg') class='block mx-auto')
+    include pug/_questions-block

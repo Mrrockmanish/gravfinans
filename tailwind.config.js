@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     screens: {
       'lg': '1200px',
-      'xl': '1408px'
+      'xl': '1440px'
     },
 
     colors: {
@@ -12,11 +12,17 @@ module.exports = {
       'black': '#000000',
       'main': '#444444',
       'gray': '#8A8A8A',
+      '91': '#919EC3',
+      '00A': '#00AEEF',
       '5C': '#5CD3FF',
       'blue': '#0D4DA1',
       'dark-blue': '#0F2447',
+      '87': '#878787',
       '8A': '#8A8A8A',
-      'BD': '#BDBDBD'
+      'BD': '#BDBDBD',
+      'F4': '#F4F4F4',
+      'orange': '#F89320',
+      'C4': '#C4C4C4'
 
     },
 
@@ -36,6 +42,7 @@ module.exports = {
     extend: {
       dropShadow: {
         'btn': '0 13px 12px rgba(18, 67, 54, 0.5)',
+        'plate': '0px 16px 23px -12px rgba(50, 50, 50, 0.1)'
       }
     },
   },

@@ -1,0 +1,12 @@
+extends steps
+
+block content
+    +title('Рассматриваем вашу заявку')
+    div(class="text-center text-base text-87 mt-2")
+        p Первый этап успешно пройден, но нам нужно с вами связаться для уточнения информации
+        p Ожидайте звонок в течение 10 минут или позвоните по&nbsp;номеру
+    div(class='text-center mt-4')
+        a(href="tel:+78007773705" class='text-[2rem] text-blue font-semibold hover:opacity-80') 8 800 777 37 05
+    div(class='mt-5')
+        img(src=require('./images/elements/short-logo.svg') class='block mx-auto')
+    include pug/_questions-block

@@ -33,6 +33,50 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: "./src/index.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'entry.html',
+      template: "./src/entry.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'step-about.html',
+      template: "./src/step-about.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'step-2.html',
+      template: "./src/step-2.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'up-rating.html',
+      template: "./src/up-rating.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'step-confirm.html',
+      template: "./src/step-confirm.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'up-rating-2.html',
+      template: "./src/up-rating-2.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'clarify.html',
+      template: "./src/clarify.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'add-card.html',
+      template: "./src/add-card.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'questions-1.html',
+      template: "./src/questions-1.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'success.html',
+      template: "./src/success.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'verdict.html',
+      template: "./src/verdict.pug"
     })
   ],
   module: {

@@ -1,0 +1,9 @@
+extends steps
+
+block content
+    +title('Ваша заявка предварительно одобрена')
+    div(class="text-center text-base text-87 mt-2")
+        p Обязательно подтвердите электронную почту и загрузите фото документов в личном кабинете
+    div(class='mt-6')
+        +btnGradient('Загрузить фотографии')
+    include pug/_questions-block
