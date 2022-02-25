@@ -19,17 +19,38 @@ $('.question__caption').on('click', function (){
   $(this).closest('.question').find('.question__content').slideToggle();
 })
 
-$('.open-block').on('click', '.open-block__caption', function (){
-  const openBlock = $(this).closest('.open-block');
+// отображение фото при загрузке файла
 
-  openBlock.toggleClass('open');
+// console.log($('.input-upload')[0].files);
 
-  if (openBlock.hasClass('open')) {
+const readURL = (input, element) => {
 
-    openBlock.find('.open-block__content').fadeIn();
-  } else {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
 
-    openBlock.find('.open-block__content').fadeOut();
+    reader.onload = function (e) {
+      element.closest('.upload-item').find('.show-img img').attr('src', e.target.result);
+      element.closest('.upload-item').find('.show-img').fadeIn();
+      element.closest('.upload-item').find('.upload-item__plus').hide();
+      element.closest('.upload-item').find('.upload-item__cancel').show();
+    };
+    reader.readAsDataURL(input.files[0]);
   }
+}
 
-})
+
+$('.input-upload').each(function (){
+  $(this).change(function (){
+    readURL(this, $(this));
+  })
+});
+
+// удаление фото из поля file
+
+$('.upload-item__cancel').on('click', function (){
+  $(this).closest('.upload-item').find('.input-upload').val('');
+  $(this).closest('.upload-item').find('.show-img img').attr('src', '');
+  $(this).closest('.upload-item').find('.show-img').hide();
+  $(this).closest('.upload-item').find('.upload-item__plus').show();
+  $(this).closest('.upload-item').find('.upload-item__cancel').hide();
+});

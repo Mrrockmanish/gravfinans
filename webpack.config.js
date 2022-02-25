@@ -77,6 +77,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'verdict.html',
       template: "./src/verdict.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'upload.html',
+      template: "./src/upload.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'last-step.html',
+      template: "./src/last-step.pug"
     })
   ],
   module: {
