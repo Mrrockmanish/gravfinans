@@ -22,7 +22,8 @@ module.exports = {
       'BD': '#BDBDBD',
       'F4': '#F4F4F4',
       'orange': '#F89320',
-      'C4': '#C4C4C4'
+      'C4': '#C4C4C4',
+      'D3': '#D31616'
 
     },
 

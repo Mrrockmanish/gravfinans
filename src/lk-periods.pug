@@ -1,0 +1,45 @@
+extends main-lk
+
+block content
+    +lk-h3('Займ по договору №12312849109')
+    div(class='flex items-center mt-5')
+        img(src=require('./images/elements/alert.svg') class='mr-2.5 mt-0.5')
+        div(class='text-base')
+            span Статус:&nbsp;
+            span(class='font-semibold') Просрочен на 31 день
+    div(class='text-gray max-w-[40rem] mt-4')
+        p Для оформления реструктуризации оплатите начисленные на текущую дату проценты на сумму <strong>2400</strong> руб
+        p Оставшуюся задолженность необходимо погашать по следующему графику
+    div(class='mt-6 font-semibold text-xl') График платежей
+    div(class='max-w-[54rem] mt-4')
+        table(class='lk-table text-gray text-center w-full')
+            thead
+                tr
+                    td(rowspan="2") №
+                    td(rowspan="2") Дата платежа
+                    td(colspan="3") Сумма платежа,&nbsp;₽
+                    td(rowspan="2") Остаток долга
+                tr
+                    td Общая сумма,&nbsp;₽
+                    td Сумма процентов,&nbsp;₽
+                    td Сумма основного долга,&nbsp;₽
+            tbody
+                tr
+                    td 1
+                    td 28.08.21
+                    td 4000
+                    td 4000
+                    td 4000
+                    td(class='text-main')
+                        strong 5000
+                tr
+                    td 1
+                    td 28.08.21
+                    td 4000
+                    td 4000
+                    td 4000
+                    td(class='text-D3')
+                        strong 0
+        div(class='text-base flex flex-wrap mt-2 -mx-2')
+            div(class='flex-grow max-w-[18rem] px-2 mt-4')
+                +lk-btn-blue('Оформить реструктуризацию')

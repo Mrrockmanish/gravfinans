@@ -85,7 +85,43 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'last-step.html',
       template: "./src/last-step.pug"
-    })
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-status-active.html',
+      template: "./src/lk-status-active.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-status-active.html',
+      template: "./src/lk-status-active.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-status-expired.html',
+      template: "./src/lk-status-expired.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-loans.html',
+      template: "./src/lk-loans.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-periods.html',
+      template: "./src/lk-periods.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-actions.html',
+      template: "./src/lk-actions.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-notify.html',
+      template: "./src/lk-notify.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-correspondence.html',
+      template: "./src/lk-correspondence.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-contacts.html',
+      template: "./src/lk-contacts.pug"
+    }),
   ],
   module: {
     rules: [

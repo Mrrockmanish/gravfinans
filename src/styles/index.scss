@@ -31,7 +31,7 @@ body {
 .container {
   padding: 0 1rem;
   margin: 0 auto;
-  min-width: 1200px;
+  min-width: 1180px;
 }
 
 a {
@@ -57,6 +57,17 @@ a {
   input, textarea, button {
     @apply outline-none
   }
+
+  .lk-table, tr, td {
+    @apply border;
+    @apply border-[#C3C3C3]
+  }
+
+  .lk-table td {
+    @apply py-2;
+    @apply px-3;
+  }
+
 }
 
 .header {
@@ -167,19 +178,65 @@ a {
 
 .style-input-label {
   left: s(16);
-  top: 0;
+  top: s(15);
   white-space: nowrap;
   overflow: hidden;
   transition: .3s;
-  height: 100%;
+  //height: 100%;
 }
 
 .style-input:focus ~ .style-input-label,
 .style-input:not(:focus):valid ~ .style-input-label {
-  top: - s(16);
+  top: 0;
   font-size: s(12);
 }
 
 .style-input:not(:focus):valid ~ .style-input-label {
   color: #0D4DA1;
+}
+
+.lk-grid {
+  display: grid;
+  grid-template-columns: minmax(14rem, 14rem) minmax(600px, 100%);
+  grid-gap: 1.5rem;
+  @media (min-width: 1440px) {
+    grid-template-columns: minmax(17rem, 17rem) minmax(600px, 100%);
+    grid-gap: 3.3rem;
+  }
+}
+
+.aside-li {
+  &.active::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: s(52);
+    height: s(2);
+    background: #0D4DA1;
+    bottom: 0;
+  }
+}
+
+.correspondence-item {
+  display: grid;
+  grid-column-gap: s(24);
+  grid-template-columns: s(175) minmax(18rem, 100%) 2rem;
+
+  &__left {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      width: s(1);
+      height: s(32);
+      background: #CACACA;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.lk-form-block {
+  grid-template-columns: minmax(18rem, 18rem) minmax(20rem, 35rem);
 }

@@ -1,0 +1,21 @@
+extends main-lk
+
+block content
+    div(class='border border-[#CACACA] rounded-20px max-w-[33rem] pt-4 pb-6 px-6')
+        h4(class='text-lg') Скоро дата погашения займа
+        div(class='text-sm text-gray mt-2')
+            p Чтобы не выйти на просрочку, рекомендуем как можно скорее погасить задолженность
+        div(class='max-w-[18rem] mt-6')
+            +lk-btn-blue('Оплатить 6500 руб')
+    div(class='border border-[#CACACA] rounded-20px max-w-[33rem] pt-4 pb-6 px-6 mt-6')
+        h4(class='text-lg') Ваша заявка на займ одобрена
+        div(class='text-sm text-gray mt-2')
+            p Взаимодействовать с займом можно в личном кабинете
+        div(class='max-w-[18rem] mt-6')
+            +lk-btn('Перейти в личный кабинет')
+    div(class='border border-[#CACACA] rounded-20px max-w-[33rem] pt-4 pb-6 px-6 mt-6')
+        h4(class='text-lg') Ваш займ погашен
+        div(class='text-sm text-gray mt-2')
+            p Взаимодействовать с займом можно в личном кабинете
+        div(class='max-w-[18rem] mt-6')
+            +lk-btn('Взять новый займ')
