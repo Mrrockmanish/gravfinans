@@ -6,6 +6,9 @@
 @tailwind utilities;
 
 @import "node_modules/magnific-popup/dist/magnific-popup";
+@import "node_modules/slick-carousel/slick/slick";
+
+
 
 
 $root-font-size: 16;
@@ -82,9 +85,16 @@ a {
   background-position: center top;
 
   &__img {
-    bottom: 3rem;
+    z-index: 5;
+    bottom: 0;
     right: 4rem;
-    transform: translateY(100%);
+    transform: translateY(100%) scale(1);
+    transition: .3s;
+    transition-timing-function: ease;
+
+    &.scale-down {
+      transform: translateY(100%) scale(0.8);
+    }
   }
 }
 
@@ -239,4 +249,57 @@ a {
 
 .lk-form-block {
   grid-template-columns: minmax(18rem, 18rem) minmax(20rem, 35rem);
+}
+
+.slick-list {
+  padding-left: 0!important;
+  padding-right: 10%!important;
+}
+
+.calc-bottom-grid {
+  display: grid;
+  grid-gap: s(32);
+  grid-template-columns: minmax(40rem, 65.5rem) minmax(20.5rem, 20.5rem);
+}
+
+.short-logo {
+  border-radius: 1rem;
+  &__center {
+    width: s(50);
+    height: s(50);
+    top: s(36);
+    left: s(36);
+    animation-name: clock;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    transform-origin: left top;
+  }
+}
+
+@keyframes clock {
+
+  15% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  65% {
+    transform: rotate(270deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

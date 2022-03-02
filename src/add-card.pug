@@ -17,13 +17,13 @@ block content
                 +input('Имя держателя карты')
                 +inputCaption('Как написано на лицевой стороне карты')
             div
-                +input('Номер карты')
+                +input('Номер карты', 'card-mask')
                 +inputCaption('Как написано на лицевой стороне карты')
             div
-                +input('Срок действия карты ')
+                +input('Срок действия карты', 'card-date-mask')
                 +inputCaption('Как написано на лицевой стороне карты')
             div
-                +input('CVV')
+                +input('CVV', 'cvv-mask')
                 +inputCaption('Как написано на лицевой стороне карты')
         div(class="mt-8")
             +btnGradient('Добавить карту и продолжить')

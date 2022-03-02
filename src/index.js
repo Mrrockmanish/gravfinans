@@ -1,6 +1,116 @@
 import './styles/index.scss'
+import './styles/_query-ui-slider.scss'
 import $ from "jquery";
-import mangificPopup from 'magnific-popup';
+import slickCarousel from 'slick-carousel';
+import uiSlider from './js/jquery-ui-slider';
+import mask from '../node_modules/jquery.maskedinput/src/jquery.maskedinput'
+
+$('.phone-mask').mask("+7(999) 999-9999");
+$('.pass-serial-mask').mask("9999");
+$('.pass-number-mask').mask("999999");
+$('.date-mask').mask("99.99.9999");
+$('.pass-code-mask').mask("999-999");
+$('.card-mask').mask('9999-9999-9999-9999');
+$('.card-date-mask').mask('99/99');
+$('.cvv-mask').mask('999');
+
+
+
+// курсор при вводе вначале
+$.fn.setCursorPosition = function(pos) {
+  if ($(this).get(0).setSelectionRange) {
+    $(this).get(0).setSelectionRange(pos, pos);
+  } else if ($(this).get(0).createTextRange) {
+    var range = $(this).get(0).createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', pos);
+    range.moveStart('character', pos);
+    range.select();
+  }
+};
+
+$('.style-input').on('click', function (){
+ if($(this).hasClass('phone-mask')) {
+   $(this).setCursorPosition(3);
+ } else {
+   $(this).setCursorPosition(0);
+ }
+});
+
+
+
+// калькулятор займов
+$('.calc-slider').each(function (){
+  const sliderEl = $(this);
+  const priceSlider = sliderEl.find('.calc-slider__price');
+  const periodSlider = sliderEl.find('.calc-slider__period');
+
+  priceSlider.slider({
+    animate: "slow",
+    range: "min",
+    value: 6000,
+    min: 1000,
+    max: 30000,
+    step: 1000,
+    slide : function(event, ui) {
+      sliderEl.find(".calc-slider__price-result").text(ui.value + ' руб.');
+      sliderEl.find(".calc-slider__price-input").val(ui.value);
+    }
+  });
+
+  sliderEl.find('.calc-slider__price-result').text(priceSlider.slider("value") + " руб.");
+
+  periodSlider.slider({
+    animate: "slow",
+    range: "min",
+    value: 12,
+    min: 7,
+    max: 30,
+    step: 1,
+    slide : function(event, ui) {
+      sliderEl.find(".calc-slider__period-result").text(ui.value + ' дней');
+      sliderEl.find(".calc-slider__period-input").val(ui.value);
+    }
+  });
+
+  sliderEl.find('.calc-slider__period-result').text(periodSlider.slider("value") + " дней");
+
+});
+
+
+// анимация телефона
+if ($('.offer__img')[0]) {
+  $(window).scroll(function (){
+    const scrollTop = $(window).scrollTop();
+
+    if(scrollTop > 10) {
+      $('.offer__img').addClass('scale-down')
+    } else if (scrollTop < 10) {
+      $('.offer__img').removeClass('scale-down')
+    }
+
+
+  })
+}
+
+
+// карусель займов
+$('.loans-carousel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  infinite: false,
+  appendArrows: $('.loans-carousel-arrows'),
+  prevArrow: `<div class="w-10 h-10 border-blue border rounded-full flex items-center justify-center text-main hover:text-white bg-transparent hover:bg-blue transition duration-300 cursor-pointer">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 1L2 7L8 13" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>`,
+  nextArrow: `<div class="w-10 h-10 border-blue border rounded-full flex items-center justify-center text-main hover:text-white bg-transparent hover:bg-blue transition duration-300 cursor-pointer">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13L7 7L0.999999 1" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>`
+})
 
 
 // отказ от страховки

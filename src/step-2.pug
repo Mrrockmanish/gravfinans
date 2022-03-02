@@ -15,30 +15,30 @@ block content
             div
                 div(class='grid grid-cols-2 gap-x-4')
                     div
-                        +input('Серия')
+                        +input('Серия', 'pass-serial-mask')
                     div
-                        +input('Номер')
+                        +input('Номер', 'pass-number-mask')
                 +inputCaption('Как в паспорте')
             div
-                +input-date('Дата выдачи')
+                +input-date('Дата выдачи', 'date-mask')
                 +inputCaption('ДД.ММ.ГГ')
             div
                 +input('Отчество')
                 +inputCaption('ДД.ММ.ГГ')
             div
-                +input('Код подразделения')
+                +input('Код подразделения', 'pass-code-mask')
                 +inputCaption('Укажите точно как в паспорте')
             div
                 +input('Кем выдан')
                 +inputCaption('Укажите точно как в паспорте')
             div
-                +input-date('Дата рождения')
+                +input-date('Дата рождения','date-mask')
                 +inputCaption('ДД.ММ.ГГ')
             div
                 +input('Место рождения')
                 +inputCaption('Укажите точно как в паспорте')
             div
-                +input('СНИЛС')
+                +input('СНИЛС', 'snils-mask')
                 +inputCaption('Укажите точно как в документе')
         div(class="mt-8")
             div(class='text-lg font-semibold') Адрес постоянной регистрации
@@ -71,7 +71,7 @@ block content
                     +input('Адрес организации')
                     +inputCaption('Укажите фактический адрес места работы')
                 div
-                    +input('Телефон организации')
+                    +input('Телефон организации', 'phone-mask')
                     +inputCaption('В 96% случаев мы не звоним по этому номеру, нужен для чего то там (придумать текст)')
                 div
                     +input('Ваша должность')
