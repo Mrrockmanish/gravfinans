@@ -122,6 +122,26 @@ module.exports = {
       filename: 'lk-contacts.html',
       template: "./src/lk-contacts.pug"
     }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-my-loans.html',
+      template: "./src/lk-my-loans.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-get-loan.html',
+      template: "./src/lk-get-loan.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-end-loan.html',
+      template: "./src/lk-end-loan.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lk-questions.html',
+      template: "./src/lk-questions.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'offer.html',
+      template: "./src/offer.pug"
+    })
   ],
   module: {
     rules: [

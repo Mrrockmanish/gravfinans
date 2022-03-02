@@ -6,6 +6,9 @@
 @tailwind utilities;
 
 @import "node_modules/magnific-popup/dist/magnific-popup";
+@import "node_modules/slick-carousel/slick/slick";
+
+
 
 
 $root-font-size: 16;
@@ -239,4 +242,15 @@ a {
 
 .lk-form-block {
   grid-template-columns: minmax(18rem, 18rem) minmax(20rem, 35rem);
+}
+
+.slick-list {
+  padding-left: 0!important;
+  padding-right: 10%!important;
+}
+
+.calc-bottom-grid {
+  display: grid;
+  grid-gap: s(32);
+  grid-template-columns: minmax(40rem, 65.5rem) minmax(20.5rem, 20.5rem);
 }

@@ -1,6 +1,24 @@
 import './styles/index.scss'
 import $ from "jquery";
+import slickCarousel from 'slick-carousel'
 import mangificPopup from 'magnific-popup';
+
+$('.loans-carousel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  infinite: false,
+  appendArrows: $('.loans-carousel-arrows'),
+  prevArrow: `<div class="w-10 h-10 border-blue border rounded-full flex items-center justify-center text-main hover:text-white bg-transparent hover:bg-blue transition duration-300 cursor-pointer">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 1L2 7L8 13" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>`,
+  nextArrow: `<div class="w-10 h-10 border-blue border rounded-full flex items-center justify-center text-main hover:text-white bg-transparent hover:bg-blue transition duration-300 cursor-pointer">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13L7 7L0.999999 1" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>`
+})
 
 
 // отказ от страховки

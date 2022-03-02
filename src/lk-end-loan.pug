@@ -1,0 +1,41 @@
+extends main-lk-page
+
+block content
+    h1(class='text-5xl font-semibold') Как взять займ
+    div(class='text-gray text-base max-w-6xl mt-4')
+        | Для Вашего удобства сервис Главфинанс предоставляет различные способы возврата суммы займа. Выберите то средство оплаты, которое полностью соответствует Вашим предпочтениям и четко следуйте указанным инструкциям.
+        | Вы можете оплатить всю сумму полностью или продлить займ, оплатив только проценты. В данном случае срок пользования деньгами будет продлён.
+    div(class='mt-10')
+        h3(class='font-semibold text-2xl') Способы погашения
+    div(class='grid grid-cols-3 gap-x-8 mt-6')
+        div(class='rounded-md bg-white px-6 py-6')
+            div(class='flex')
+                div(class='flex flex-shrink-0 items-center justify-center font-semibold text-[2.5rem] text-[#E3E3E3] border border-[#E3E3E3] rounded-full w-12 h-12 mr-4') 1
+                div(class='text-xl font-semibold') Банковскими картами Visa, MasterCard, Мир, Maestro
+            div(class='text-gray text-base mt-4') От нескольких секунд до трёх дней в зависимости от банка
+            div(class="grid grid-cols-4 gap-4 justify-between items-center max-w-[16rem] mt-4")
+                img(src=require('./images/examples/visa.png') alt="")
+                img(src=require('./images/examples/mir.png') alt="")
+                img(src=require('./images/examples/master.png') alt="")
+                img(src=require('./images/examples/maestro.png') alt="")
+        div(class='rounded-md bg-white px-6 py-6')
+            div(class='flex')
+                div(class='flex flex-shrink-0 items-center justify-center font-semibold text-[2.5rem] text-[#E3E3E3] border border-[#E3E3E3] rounded-full w-12 h-12 mr-4') 2
+                div(class='text-xl font-semibold') Через систему Qiwi
+            div(class='text-gray text-base mt-4') Через систему Qiwi с помощью сети терминалов, или через <a href='#' class='text-blue underline'>сайт Qiwi</a>
+            div(class='mt-4')
+                img(src=require('./images/elements/qiwi.svg') alt='')
+        div(class='rounded-md bg-white px-6 py-6')
+            div(class='flex')
+                div(class='flex flex-shrink-0 items-center justify-center font-semibold text-[2.5rem] text-[#E3E3E3] border border-[#E3E3E3] rounded-full w-12 h-12 mr-4') 3
+                div(class='text-xl font-semibold') Через систему Элекснет
+            div(class='text-gray text-base mt-4') Через систему Элекснет с помощью сети терминалов, или через <a href='#' class='text-blue underline'>сайт Элекснет</a>
+            div(class='mt-4')
+                img(src=require('./images/elements/eleksnet.svg') alt='')
+    div(class='mt-10')
+        h3(class='text-2xl font-semibold') Рассрочка платежа
+        div(class='text-gray text-base max-w-6xl mt-2')
+            p Если вы не располагаете всей суммой, вы можете воспользоваться акцией «У вас просрочка? У нас рассрочка!» и погасить оставшуюся задолженность по графику. Мы делим остаток на 6 платежей и 3 месяца. Основной долг уменьшается с кажым платежом!
+        div(class='max-w-[18rem] mt-6')
+            +lk-btn-blue("Взять займ")
+
