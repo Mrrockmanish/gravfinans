@@ -135,6 +135,10 @@ module.exports = {
       template: "./src/lk-end-loan.pug"
     }),
     new HtmlWebpackPlugin({
+      filename: 'lk-my-data.html',
+      template: "./src/lk-my-data.pug"
+    }),
+    new HtmlWebpackPlugin({
       filename: 'lk-questions.html',
       template: "./src/lk-questions.pug"
     }),

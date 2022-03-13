@@ -5,6 +5,7 @@ import slickCarousel from 'slick-carousel';
 import uiSlider from './js/jquery-ui-slider';
 import mask from '../node_modules/jquery.maskedinput/src/jquery.maskedinput'
 
+
 $('.phone-mask').mask("+7(999) 999-9999");
 $('.pass-serial-mask').mask("9999");
 $('.pass-number-mask').mask("999999");
@@ -13,7 +14,7 @@ $('.pass-code-mask').mask("999-999");
 $('.card-mask').mask('9999-9999-9999-9999');
 $('.card-date-mask').mask('99/99');
 $('.cvv-mask').mask('999');
-
+$('.snils-mask').mask('999-999-99-99');
 
 
 // курсор при вводе вначале
@@ -29,13 +30,20 @@ $.fn.setCursorPosition = function(pos) {
   }
 };
 
+
 $('.style-input').on('click', function (){
- if($(this).hasClass('phone-mask')) {
-   $(this).setCursorPosition(3);
- } else {
-   $(this).setCursorPosition(0);
- }
+  $(this).focus();
 });
+
+$('.input-edit-icon').on('click', function (){
+
+  const input = $(this).prev('.style-input');
+
+  input.val('');
+
+  input.removeClass('input-edit').focus();
+
+})
 
 
 

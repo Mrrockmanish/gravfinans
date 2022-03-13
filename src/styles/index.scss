@@ -196,13 +196,26 @@ a {
 }
 
 .style-input:focus ~ .style-input-label,
-.style-input:not(:focus):valid ~ .style-input-label {
+.style-input:not(:focus):valid ~ .style-input-label,
+.style-input.readonly ~ .style-input-label {
   top: 0;
   font-size: s(12);
 }
 
 .style-input:not(:focus):valid ~ .style-input-label {
   color: #0D4DA1;
+}
+
+.input-edit {
+  pointer-events: none;
+}
+
+.input-edit:not(:focus):valid {
+  color: #8A8A8A;
+
+  & ~ .style-input-label {
+    color: #878787;
+  }
 }
 
 .lk-grid {
