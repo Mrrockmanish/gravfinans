@@ -41,7 +41,7 @@ module.exports = {
     },
 
     extend: {
-      dropShadow: {
+      boxShadow: {
         'btn': '0 13px 12px rgba(18, 67, 54, 0.5)',
         'plate': '0px 16px 23px -12px rgba(50, 50, 50, 0.1)'
       }
