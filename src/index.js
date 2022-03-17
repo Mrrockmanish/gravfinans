@@ -133,6 +133,7 @@ $('.no-save-confirm').on('click', function (){
 
 // вопросы
 $('.question__caption').on('click', function (){
+  $(this).toggleClass('text-8A text-main font-semibold');
   $(this).find('.question__chevron').toggleClass('rotate-x-180');
   $(this).closest('.question').find('.question__content').slideToggle();
 })
