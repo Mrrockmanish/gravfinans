@@ -186,6 +186,14 @@ a {
   transform: rotateX(180deg);
 }
 
+.input-success::before {
+  content: url("../images/elements/green-check.svg");
+  position: absolute;
+  right: s(20);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .style-input-label {
   left: s(16);
   top: s(15);
@@ -315,4 +323,22 @@ a {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.sum__count {
+  -moz-appearance:textfield;
+}
+
+.period__count {
+  -moz-appearance:textfield;
+}
+
+.sum__count::-webkit-outer-spin-button,
+.sum__count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.period__count::-webkit-outer-spin-button,
+.period__count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }

@@ -35,6 +35,10 @@ module.exports = {
       template: "./src/index.pug"
     }),
     new HtmlWebpackPlugin({
+      filename: 'calc-v-2.html',
+      template: "./src/calc-v-2.pug"
+    }),
+    new HtmlWebpackPlugin({
       filename: 'entry.html',
       template: "./src/entry.pug"
     }),

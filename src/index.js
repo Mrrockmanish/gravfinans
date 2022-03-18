@@ -86,6 +86,61 @@ $('.calc-slider').each(function (){
 });
 
 
+// калькулятор займов вторая вариация
+
+$('.sum__count').on('change', function (){
+  let count = $(this).val();
+
+  if (count < 6000) {
+    $(this).val('6000');
+  } else if (count > 30000) {
+    $(this).val('30000');
+  }
+
+});
+
+$('.sum__plus').on('click', function (){
+  let count = $(this).closest('.sum').find('.sum__count').val();
+  if (count < 30000) {
+    $(this).closest('.sum').find('.sum__count').val(+count + 1000);
+  }
+});
+
+$('.sum__minus').on('click', function (){
+  let count = $(this).closest('.sum').find('.sum__count').val();
+  if (count > 6000) {
+    $(this).closest('.sum').find('.sum__count').val(+count - 1000);
+  }
+});
+
+// дни
+
+$('.period__count').on('change', function (){
+  let count = $(this).val();
+
+  if (count < 7) {
+    $(this).val('7');
+  } else if (count > 30) {
+    $(this).val('30');
+  }
+
+});
+
+$('.period__plus').on('click', function (){
+  let count = $(this).closest('.period').find('.period__count').val();
+  if (count < 30) {
+    $(this).closest('.period').find('.period__count').val(+count + 1);
+  }
+});
+
+$('.period__minus').on('click', function (){
+  let count = $(this).closest('.period').find('.period__count').val();
+  if (count > 7) {
+    $(this).closest('.period').find('.period__count').val(+count - 1);
+  }
+});
+
+
 // анимация телефона
 if ($('.offer__img')[0]) {
   $(window).scroll(function (){
