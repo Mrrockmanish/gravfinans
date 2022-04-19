@@ -228,3 +228,16 @@ $('.upload-item__cancel').on('click', function (){
   $(this).closest('.upload-item').find('.upload-item__plus').show();
   $(this).closest('.upload-item').find('.upload-item__cancel').hide();
 });
+
+// галочка при вооде смс
+$('.input-validate').on('keyup', '.style-input', function (){
+
+  const count = $(this).val();
+
+  if (count.length == 4) {
+    $(this).closest('.input-validate').addClass('success')
+  } else {
+    $(this).closest('.input-validate').removeClass('success')
+  }
+
+})
