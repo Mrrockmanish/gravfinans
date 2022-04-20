@@ -241,30 +241,8 @@ $(document).ready(function (){
     } else {
       $(this).closest('.input-validate').removeClass('success')
     }
-
   });
 
-
-  // $('.offers__sub-one').on('change', function (){
-  //   if (!$(this).is(':checked')) {
-  //     $(this).closest('.offers').find('.offers__main').prop('checked', false);
-  //     $(this).closest('.offers').find('.offers__sub-two').prop('checked', false);
-  //   }
-  // });
-  //
-  // $('.offers__sub-two').on('change', function (){
-  //   if (!$(this).is(':checked')) {
-  //     $(this).closest('.offers').find('.offers__fail').prop('checked', false);
-  //   }
-  // });
-  //
-  // $('.offers__fail').on('change', function (){
-  //   if ($(this).is(':checked')) {
-  //     $(this).closest('.offers').find('.offers__main').prop('checked', false);
-  //     $(this).closest('.offers').find('.offers__sub-one').prop('checked', false);
-  //     $(this).closest('.offers').find('.offers__sub-two').prop('checked', false);
-  //   }
-  // });
 
 
   $('.offers').on('change', '.checkbox-blue', function (){
@@ -282,9 +260,8 @@ $(document).ready(function (){
 
   });
 
-
   $('.offers .open').on('click', function (){
     $(this).closest('.offers').find('.offers__main-inner').slideToggle();
-  })
+  });
 
 });
