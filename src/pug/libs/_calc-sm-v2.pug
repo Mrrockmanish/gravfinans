@@ -1,7 +1,7 @@
 mixin calc-sm-v-2(addClass)
     form(class=`${addClass} flex-shrink-0 bg-white rounded-3xl py-6 px-5`)
-        div(class="text-xl font-semibold") Взять займ
-        div(class="text-sm mt-2 ") Одобряем 98% при заполнении заявки через Госуслуги
+        div(class="text-lg font-semibold") Выберите сумму и срок займа
+        div(class="text-sm mt-2 ") Одобряем 91% при регистрации через Госуслуги
             div
                 div(class="flex justify-between items-center mt-4")
                     div(class="text-sm") Сумма займа
@@ -35,4 +35,6 @@ mixin calc-sm-v-2(addClass)
             div(class="mt-8")
                 button(type='submit' class="gradient-btn rounded-[6.8rem] flex items-center justify-center w-full h-12 text-white text-sm font-semibold hover:opacity-80") Получить деньги
             div(class="text-center mt-6")
-                a(href="#" class="text-sm hover:opacity-80") Войти через Госуслуги
+                a(href="#" class="flex items-center justify-center text-xl hover:opacity-80")
+                    div(class='text-sm mr-4') Регистрация через
+                    img(src=require('./images/elements/gos.png') class="w-20" alt="")
