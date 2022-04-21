@@ -375,3 +375,19 @@ input::-webkit-inner-spin-button {
     display: list-item;
   }
 }
+
+ol.counter {
+  counter-reset: item;
+  padding-left: 0;
+  margin-top: s(20);
+}
+
+ol.counter > li {
+  display: block;
+  margin-bottom: 15px;
+}
+
+ol.counter > li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
