@@ -162,7 +162,27 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'fail.html',
       template: "./src/fail.pug"
-    })
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'normativs.html',
+      template: "./src/normativs.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'politic.html',
+      template: "./src/politic.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'repayment.html',
+      template: "./src/repayment.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'require.html',
+      template: "./src/require.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'info-docs.html',
+      template: "./src/info-docs.pug"
+    }),
   ],
   module: {
     rules: [
