@@ -297,7 +297,7 @@ $(document).ready(function (){
     }
   });
 
-
+  // соглашения с условиями
 
   $('.offers').on('change', '.checkbox-blue', function (){
 
@@ -319,6 +319,23 @@ $(document).ready(function (){
   });
 
 
+   // соглашение с условиям кредита
 
+  $('.credit-agree__check').on('change', function (){
+
+    if ($(this).is(':checked')) {
+
+      $(this).closest('.credit-agree').find('.credit-agree__open').find('input').prop('checked', true);
+
+    } else {
+      $(this).closest('.credit-agree').find('.credit-agree__open').find('input').prop('checked', false);
+    }
+
+  });
+
+  $('.credit-agree__more-toggle').on('click', function (){
+    $('.credit-agree__more-toggle-svg').toggleClass('rotate-180');
+    $(this).closest('.credit-agree').find('.credit-agree__open').slideToggle();
+  });
 
 });
