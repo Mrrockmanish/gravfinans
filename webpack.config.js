@@ -183,6 +183,10 @@ module.exports = {
       filename: 'info-docs.html',
       template: "./src/info-docs.pug"
     }),
+    new HtmlWebpackPlugin({
+      filename: 'new-request.html',
+      template: "./src/new-request.pug"
+    }),
   ],
   module: {
     rules: [
