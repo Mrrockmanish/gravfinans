@@ -338,4 +338,6 @@ $(document).ready(function (){
     $(this).closest('.credit-agree').find('.credit-agree__open').slideToggle();
   });
 
+
+
 });
