@@ -7,9 +7,38 @@ block content
         div(class='text-base')
             span Статус:&nbsp;
             span(class='font-semibold') Просрочен на 31 день
-    div(class='text-gray max-w-[40rem] mt-4')
-        p Для оформления реструктуризации оплатите начисленные на текущую дату проценты на сумму <strong>2400</strong> руб
-        p Оставшуюся задолженность необходимо погашать по следующему графику
+    div(class='text-gray mt-4')
+        p Уважаемая Виктория Викторовна! Оставшуюся задолженность необходимо погашать по следующему графику
+        div(class="flex flex-wrap")
+            div(class="mr-4") Сумма займа: <strong class="text-main">6000 руб</strong>
+            div(class="mr-4") Сумма возврата: <strong class="text-main">6500 руб</strong>
+            div(class="mr-4") Процентная ставка: <strong class="text-main">1%</strong>
+            div(class="mr-4") Срок: до  <strong class="text-main">6000 руб</strong>
+    div(class="border border-C4 rounded-md px-5 py-2 mt-4")
+        div(class="font-semibold") Плановый платеж
+        div(class="flex text-gray -mx-5")
+            div(class="px-5 mt-4")
+                div(class="font-medium") Дата платежа
+                div(class="mt-0.5") 28.08.21
+            div(class="px-5 mt-4")
+                div(class="font-medium") Сумма платежа
+                div(class="text-xl font-bold text-main") 5318 руб.
+            div(class="self-end flex-shrink-0 px-4 mt-4")
+                +lk-btn-blue('Внести заранее')
+            div(class="text-sm px-5 mt-4")
+                div % на просроченный долг <strong class="text-D3">51 руб.</strong>
+                div Сумма пратежа по графику <strong class="text-D3">3435 руб.</strong>
+    div(class="border border-C4 rounded-md px-5 py-2 mt-4")
+        div(class="font-semibold") Досрочное погащение
+        div(class="flex text-gray -mx-5")
+            div(class="px-5 mt-4")
+                div(class="font-medium") Дата платежа
+                div(class="mt-0.5") сегодня
+            div(class="px-5 mt-4")
+                div(class="font-medium") Сумма платежа
+                div(class="border border-blue rounded-lg px-4 py-1 w-full mt-1") 5318 руб.
+            div(class="self-end flex-shrink-0 px-4 mt-4")
+                +lk-btn-blue('Внести сегодня')
     div(class='mt-6 font-semibold text-xl') График платежей
     div(class='max-w-[54rem] mt-4')
         table(class='lk-table text-gray text-center w-full')
@@ -27,7 +56,10 @@ block content
                 tr
                     td 1
                     td 28.08.21
-                    td 4000
+                    td
+                        div(class="flex w-full justify-center")
+                            div 4000
+                            +info-btn
                     td 4000
                     td 4000
                     td(class='text-main')
@@ -40,6 +72,14 @@ block content
                     td 4000
                     td(class='text-D3')
                         strong 0
+                tr
+                    td 1
+                    td 28.08.21
+                    td 4000
+                    td 4000
+                    td 4000
+                    td(class='text-D3')
+                        div(class="px-4 py-1 text-white bg-[#4DB45E] rounded-[2.5rem]") Оплачен
         div(class='text-base flex flex-wrap mt-2 -mx-2')
             div(class='flex-grow max-w-[18rem] px-2 mt-4')
                 +lk-btn-blue('Оформить реструктуризацию')
