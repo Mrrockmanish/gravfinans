@@ -1,0 +1,41 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+    include pug/_head
+    body()
+        include pug/_header
+        div(class="bg-F4 pb-44 pt-14")
+            div(class="container")
+                h1(class='text-5xl font-semibold') Ваш личный кабинет
+                div(class='text-[2rem] font-semibold mt-4') Соломыкин Артём Андреевич
+                div(class='lk-grid mt-10')
+                    +aside
+                    div(class='lk-upload')
+                        div(class="grid gap-y-4")
+                            div
+                                +input('Фамилия', '', 'alert-error')
+                                +inputCaption('Как в паспорте')
+                            div
+                                +input('Фамилия', '', 'alert-success')
+                                +inputCaption('Как в паспорте')
+                            div
+                                +input('Фамилия', '', 'alert-info')
+                                +inputCaption('Как в паспорте')
+                            div
+                                +input('Фамилия', '', 'alert-light')
+                                +inputCaption('Как в паспорте')
+                            div(class="alert-error rounded-lg px-5 py-4")
+                                h4(class="font-semibold text-xl") Займ по договору №12312849109
+                                div(class="text-sm mt-2 text-8A") Уважаемая Виктория Викторовна! Оставшуюся задолженность необходимо погашать по следующему графику
+                            div(class="alert-success rounded-lg px-5 py-4")
+                                h4(class="font-semibold text-xl") Займ по договору №12312849109
+                                div(class="text-sm mt-2 text-8A") Уважаемая Виктория Викторовна! Оставшуюся задолженность необходимо погашать по следующему графику
+                            div(class="alert-info rounded-lg px-5 py-4")
+                                h4(class="font-semibold text-xl") Займ по договору №12312849109
+                                div(class="text-sm mt-2 text-8A") Уважаемая Виктория Викторовна! Оставшуюся задолженность необходимо погашать по следующему графику
+                            div(class="alert-light rounded-lg px-5 py-4")
+                                h4(class="font-semibold text-xl") Займ по договору №12312849109
+                                div(class="text-sm mt-2 text-8A") Уважаемая Виктория Викторовна! Оставшуюся задолженность необходимо погашать по следующему графику
+
+    include pug/_footer

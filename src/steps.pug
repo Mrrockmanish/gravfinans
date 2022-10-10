@@ -6,7 +6,10 @@ html(lang='en')
     body()
         include pug/_header
         div(class="bg-blue py-28")
-            div(class="white-container relative overflow-hidden")
-                div(class="mx-auto max-w-[31rem]")
-                    block content
+            div(class="container")
+                div(class="flex justify-start pl-20")
+                    +aside
+                    div(class="white-container ml-8 relative overflow-hidden")
+                        div(class="mx-auto max-w-[31rem]")
+                            block content
     include pug/_footer

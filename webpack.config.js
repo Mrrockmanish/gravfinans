@@ -156,6 +156,10 @@ module.exports = {
       template: "./src/lk-upload.pug"
     }),
     new HtmlWebpackPlugin({
+      filename: 'lk-alerts.html',
+      template: "./src/lk-alerts.pug"
+    }),
+    new HtmlWebpackPlugin({
       filename: 'offer.html',
       template: "./src/offer.pug"
     }),

@@ -135,7 +135,7 @@ a {
   border-radius: s(22);
   padding: s(36) s(16) s(56);
   width: s(688);
-  margin: 0 auto;
+  //margin: 0 auto;
 }
 
 .scale {
@@ -413,4 +413,24 @@ ol.counter > li:before {
 .input-dropdown__list::-webkit-scrollbar-thumb {
   background-color: #80A0CA;    /* цвет плашки */
   border-radius: 20px;       /* закругления плашки */
+}
+
+.alert-error {
+  background: rgba(255, 64, 64, 0.25);
+  border: 1px solid #FF4040;
+}
+
+.alert-success {
+  background: rgba(77, 180, 94, 0.25);
+  border: 1px solid #4DB45E;
+}
+
+.alert-info {
+  background: rgba(92, 211, 255, 0.25);
+  border: 1px solid #5CD3FF;
+}
+
+.alert-light {
+  background: rgba(211, 211, 211, 0.25);
+  border: 1px solid #D3D3D3;
 }
