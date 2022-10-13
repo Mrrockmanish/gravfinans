@@ -1,7 +1,7 @@
 mixin input-dropdown(text, adClass)
-    div(class="input-dropdown relative border border-91 rounded-lg py-2 pl-4 pr-5 h-14 z-20")
-        div(class="input-dropdown__input-wrap flex items-center justify-between mt-2")
-            input(required type="text" name="example" class=`input-dropdown__input pointer-events-none style-input ${adClass} relative text-base w-full z-10 bg-transparent`)
+    div(class="input-dropdown relative border border-91 rounded-lg h-14 z-20")
+        div(class="input-dropdown__input-wrap flex items-center justify-between pl-4 pr-5 h-full")
+            input(required type="text" name="example" class=`input-dropdown__input mt-2 pointer-events-none style-input ${adClass} relative text-base w-full z-10 bg-transparent`)
             label(class="style-input-label absolute text-base text-gray flex items-center")= text
             <svg class="dropdown-icon" width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L9 9L17 1" stroke="black"/>
