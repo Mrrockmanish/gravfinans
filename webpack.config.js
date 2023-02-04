@@ -191,6 +191,10 @@ module.exports = {
       filename: 'new-request.html',
       template: "./src/new-request.pug"
     }),
+    new HtmlWebpackPlugin({
+      filename: 'modal-example.html',
+      template: "./src/modal-example.pug"
+    }),
   ],
   module: {
     rules: [
